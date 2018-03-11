@@ -13,14 +13,6 @@ body {
   padding: 0px;
   margin: 0px; }
 
-* {
-  margin: 0;
-  padding: 0;
-  outline: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
 .wrapper {
   max-width: 1140px;
   margin: 0 auto; }
@@ -33,11 +25,9 @@ body {
     .header .wrapper .top {
       width: 100%;
       display: flex;
-      -webkit-justify-content: flex-end;
       justify-content: flex-end; }
       .header .wrapper .top ul {
         display: flex;
-        -webkit-align-items: center;
         align-items: center; }
         .header .wrapper .top ul li {
           display: inline-block;
@@ -63,7 +53,6 @@ body {
   .nav .wrapper {
     height: 88px;
     display: flex;
-    -webkit-align-items: center;
     align-items: center;
     position: relative; }
     .nav .wrapper .imghover {
@@ -98,7 +87,6 @@ body {
 
 .topsellers .wrapper .tit {
   display: flex;
-  -webkit-justify-content: center;
   justify-content: center; }
   .topsellers .wrapper .tit h2 {
     margin: 0;
@@ -116,11 +104,8 @@ body {
 
 .topsellers .wrapper .items {
   display: flex;
-  -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-flex-wrap: wrap;
-    -webkit-flex-wrap--ms-flex-wrap: wrap;
-    -webkit-flex-wrap-flex-wrap: wrap;
+  flex-wrap: wrap;
   position: relative;
   z-index: 1; }
   .topsellers .wrapper .items .item {
@@ -151,10 +136,13 @@ body {
       display: none; }
   .topsellers .wrapper .items .item:hover {
     z-index: 150;
-    -webkit-transform: scale(1.1, 1.2);
-    -moz-transform: scale(1.1, 1.2);
-    -ms-transform: scale(1.1, 1.2);
-    -o-transform: scale(1.1, 1.2);
     transform: scale(1.1, 1.2); }
     .topsellers .wrapper .items .item:hover .bp {
-      display: block; }
+      display: block;
+      position: absolute;
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+      left: -1px;
+      right: -1px;
+      background-color: white; }
